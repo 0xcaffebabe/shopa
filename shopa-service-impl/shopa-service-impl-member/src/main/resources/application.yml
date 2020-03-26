@@ -10,3 +10,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka
+swagger:
+  base-package: wang.ismy.shopa
+  title: 微服务项目-会员服务接口
+  version: 1.1
+  contact:
+    name: MY
+    email: 715711877@qq.com

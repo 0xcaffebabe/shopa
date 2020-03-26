@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>shopa-basics-eureka</module>
+        <module>shopa-basics-zuul</module>
     </modules>
 
 
