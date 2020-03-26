@@ -18,3 +18,13 @@ shopa 顶级父模块
 -- -- shopa-service-impl-weixin 微信接口实现模块
 -- -- shopa-service-impl-member 会员接口实现模块
 ```
+
+### 注册中心
+
+- eureka
+
+### 配置中心
+
+使用apollo
+
+<https://github.com/ctripcorp/apollo>
