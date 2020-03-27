@@ -1,5 +1,8 @@
 package wang.ismy.shopa.service;
 
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.mp.api.WxMpService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 import wang.ismy.shopa.api.WeixinService;
@@ -14,6 +17,9 @@ public class WeixinServiceImpl implements WeixinService {
 
     @Value("${system.version:unknown}")
     private String systemVersion;
+
+    @Autowired
+    private WxMpService wxMpService;
 
     @Override
     public AppEntity run() {

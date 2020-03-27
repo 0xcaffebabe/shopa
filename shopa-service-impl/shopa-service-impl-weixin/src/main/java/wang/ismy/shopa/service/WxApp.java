@@ -14,8 +14,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 @EnableSwagger2Doc
 @EnableApolloConfig
-public class WeixinApp {
+public class WxApp {
     public static void main(String[] args) {
-        SpringApplication.run(WeixinApp.class,args);
+        SpringApplication.run(WxApp.class,args);
     }
 }
