@@ -3,6 +3,7 @@ package wang.ismy.shopa.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import wang.ismy.shopa.api.MemberService;
+import wang.ismy.shopa.common.BaseResponse;
 import wang.ismy.shopa.entity.AppEntity;
 import wang.ismy.shopa.service.client.WeixinServiceClient;
 
@@ -17,7 +18,7 @@ public class MemberServiceImpl implements MemberService {
     WeixinServiceClient weixinServiceClient;
 
     @Override
-    public AppEntity member() {
+    public BaseResponse<AppEntity> member() {
         return weixinServiceClient.run();
     }
 }

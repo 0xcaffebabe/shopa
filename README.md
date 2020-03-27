@@ -9,6 +9,8 @@
 shopa 顶级父模块
 -- shopa-basics 基础设施
 -- -- shop-basic-eureka eureka注册中心
+-- shopa-common 公用模块
+-- -- shopa-common-core
 -- shopa-service-api api公共模块
 -- -- shopa-service-api-weixin 微信api模块
 -- -- shopa-service-api-member 会员api模块

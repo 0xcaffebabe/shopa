@@ -3,6 +3,7 @@ package wang.ismy.shopa.api;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
+import wang.ismy.shopa.common.BaseResponse;
 import wang.ismy.shopa.entity.AppEntity;
 
 /**
@@ -14,5 +15,5 @@ public interface MemberService {
 
     @GetMapping("/")
     @ApiOperation(value = "会员服务调用微信服务")
-    AppEntity member();
+    BaseResponse<AppEntity> member();
 }
