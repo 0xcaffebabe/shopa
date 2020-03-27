@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import wang.ismy.shopa.api.MemberService;
 import wang.ismy.shopa.common.BaseResponse;
 import wang.ismy.shopa.entity.AppEntity;
-import wang.ismy.shopa.service.client.WeixinServiceClient;
+import wang.ismy.shopa.service.client.WxServiceClient;
 
 /**
  * @author MY
@@ -15,10 +15,10 @@ import wang.ismy.shopa.service.client.WeixinServiceClient;
 public class MemberServiceImpl implements MemberService {
 
     @Autowired
-    WeixinServiceClient weixinServiceClient;
+    WxServiceClient wxServiceClient;
 
     @Override
     public BaseResponse<AppEntity> member() {
-        return weixinServiceClient.run();
+        return wxServiceClient.run();
     }
 }

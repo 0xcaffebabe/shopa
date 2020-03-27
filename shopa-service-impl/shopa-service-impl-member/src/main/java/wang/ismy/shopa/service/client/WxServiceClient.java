@@ -8,4 +8,4 @@ import wang.ismy.shopa.api.WeixinService;
  * @date 2020/3/26 15:03
  */
 @FeignClient("app-weixin")
-public interface WeixinServiceClient extends WeixinService { }
+public interface WxServiceClient extends WeixinService { }

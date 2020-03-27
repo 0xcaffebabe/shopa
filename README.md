@@ -30,3 +30,10 @@ shopa 顶级父模块
 使用apollo
 
 <https://github.com/ctripcorp/apollo>
+
+### 服务
+
+#### 微信服务
+
+- 生成注册验证码，消息发送
+- 验证验证码

@@ -1,4 +1,4 @@
-package wang.ismy.shopa.service;
+package wang.ismy.shopa.service.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
