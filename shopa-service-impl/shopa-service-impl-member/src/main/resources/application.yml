@@ -2,3 +2,11 @@ app:
   id: app_shopa_member
 apollo:
   meta: http://localhost:8080
+spring:
+  datasource:
+    url: jdbc:mysql:///shopa_member
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true

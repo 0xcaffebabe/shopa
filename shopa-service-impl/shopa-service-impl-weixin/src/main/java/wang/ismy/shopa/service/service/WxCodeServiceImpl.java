@@ -30,9 +30,9 @@ public class WxCodeServiceImpl extends BaseApiService implements WxCodeService {
         }
         String result = redisTemplate.opsForValue().get("WEIXIN_REGISTER_"+email);
         if (code.equals(result)){
-            return setResultSuccess("验证成功");
+            return setResultSuccess(true);
         }else{
-            return setResultError("验证失败");
+            return setResultSuccess(false);
         }
     }
 }
