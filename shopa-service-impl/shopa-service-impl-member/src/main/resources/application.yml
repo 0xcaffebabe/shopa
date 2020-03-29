@@ -1,3 +1,5 @@
+server:
+  port: ${port}
 app:
   id: app_shopa_member
 apollo:
@@ -10,3 +12,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   main:
     allow-bean-definition-overriding: true
+  session:
+    store-type: redis

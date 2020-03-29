@@ -17,7 +17,9 @@ zuul:
       ### 以 /api-weixin/访问转发到会员服务
       path: /api-weixin/**
       serviceId: app-weixin
+      sensitiveHeaders: "*"
     api-b:
       ### 以 /api-member/访问转发到订单服务
       path: /api-member/**
       serviceId: app-member
+      sensitiveHeaders: "*"

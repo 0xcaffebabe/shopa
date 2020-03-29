@@ -14,6 +14,8 @@ import wang.ismy.shopa.entity.AppEntity;
 import wang.ismy.shopa.entity.UserEntity;
 import wang.ismy.shopa.entity.dto.UserLoginInpDTO;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author MY
  * @date 2020/3/26 14:58
@@ -43,4 +45,8 @@ public interface MemberService {
     @GetMapping("/getUserInfo")
     @ApiOperation(value = "/getUserInfo")
     BaseResponse<UserEntity> getInfo(@RequestParam("token") String token);
+
+    @GetMapping("/session")
+    @ApiOperation(value = "测试分布式session")
+    String session(HttpServletRequest request, @RequestParam(value = "username",required = false) String username);
 }

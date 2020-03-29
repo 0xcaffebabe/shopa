@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * @author MY
@@ -20,6 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableApolloConfig
 @MapperScan("wang.ismy.shopa.service.mapper")
 @ComponentScan(basePackages = "wang.ismy.shopa")
+@EnableRedisHttpSession
 public class MemberApp {
     public static void main(String[] args) {
         SpringApplication.run(MemberApp.class,args);

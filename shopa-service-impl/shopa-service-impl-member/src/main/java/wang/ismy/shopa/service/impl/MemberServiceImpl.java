@@ -3,6 +3,7 @@ package wang.ismy.shopa.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 import wang.ismy.shopa.api.MemberService;
 import wang.ismy.shopa.common.BaseApiService;
@@ -18,6 +19,8 @@ import wang.ismy.shopa.service.mapper.UserMapper;
 import wang.ismy.shopa.service.mapper.UserTokenMapper;
 import wang.ismy.shopa.service.utils.GenerateToken;
 import wang.ismy.shopa.service.utils.MD5Util;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author MY
@@ -41,6 +44,9 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
     @Autowired
     private GenerateToken generateToken;
 
+    @Value("${server.port}")
+    private String port;
+
     @Override
     public BaseResponse<AppEntity> member() {
         return wxServiceClient.run();
@@ -63,7 +69,7 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
         if (StringUtils.isEmpty(password)) {
             return setResultError("密码不能为空!");
         }
-        if (!wxCodeServiceClient.verify(user.getEmail(),registerCode).getData()){
+        if (!wxCodeServiceClient.verify(user.getEmail(), registerCode).getData()) {
             return setResultError("注册失败:验证码错误");
         }
         password = MD5Util.MD5(password);
@@ -75,7 +81,7 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
     @Override
     public BaseResponse<Boolean> existEmail(String email) {
         UserEntity userEntity = userMapper.existEmail(email);
-        return userEntity == null?setResultSuccess(false):setResultSuccess(true);
+        return userEntity == null ? setResultSuccess(false) : setResultSuccess(true);
     }
 
     @Override
@@ -154,4 +160,15 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
         }
         return setResultSuccess(userDo);
     }
+
+    @Override
+    public String session(HttpServletRequest request, String username) {
+        if (StringUtils.isEmpty(username)) {
+            return port + ":" + request.getSession().getAttribute("username").toString();
+        } else {
+            request.getSession().setAttribute("username", username);
+            return port + ":" + "write success";
+        }
+    }
 }
+
