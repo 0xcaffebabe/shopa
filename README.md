@@ -31,6 +31,12 @@ shopa 顶级父模块
 
 <https://github.com/ctripcorp/apollo>
 
+### 统一数据转换
+
+- inputDTO
+- outputDTO
+- DO
+
 ### 服务
 
 #### 微信服务

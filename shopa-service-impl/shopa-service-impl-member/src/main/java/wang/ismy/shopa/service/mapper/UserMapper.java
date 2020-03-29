@@ -19,4 +19,11 @@ public interface UserMapper {
 
     @Select("SELECT * FROM tb_user WHERE EMAIL=#{email};")
     UserEntity existEmail(@Param("email") String email);
+
+    @Select("SELECT * "
+            + "  FROM tb_user  WHERE MOBILE=#{mobile} and password=#{password};")
+    UserEntity login(@Param("mobile") String mobile, @Param("password") String password);
+
+    @Select("SELECT * FROM tb_user WHERE USER_ID = #{userId}")
+    UserEntity findByUserId(Long userId);
 }

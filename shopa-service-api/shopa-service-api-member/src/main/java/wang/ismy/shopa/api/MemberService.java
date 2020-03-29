@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import wang.ismy.shopa.common.BaseResponse;
 import wang.ismy.shopa.entity.AppEntity;
 import wang.ismy.shopa.entity.UserEntity;
+import wang.ismy.shopa.entity.dto.UserLoginInpDTO;
 
 /**
  * @author MY
@@ -34,4 +35,12 @@ public interface MemberService {
             @ApiImplicitParam(paramType = "query", name = "email", dataType = "String", required = true, value = "用户邮箱"), })
     @PostMapping("/existEmail")
     BaseResponse<Boolean> existEmail(@RequestParam("email") String email);
+
+    @PostMapping("/login")
+    @ApiOperation(value = "会员用户登陆信息接口")
+    BaseResponse<JSONObject> login(@RequestBody UserLoginInpDTO userLoginInpDTO);
+
+    @GetMapping("/getUserInfo")
+    @ApiOperation(value = "/getUserInfo")
+    BaseResponse<UserEntity> getInfo(@RequestParam("token") String token);
 }
