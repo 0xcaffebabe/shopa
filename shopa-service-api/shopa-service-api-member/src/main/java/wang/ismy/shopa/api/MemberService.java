@@ -49,4 +49,8 @@ public interface MemberService {
     @GetMapping("/session")
     @ApiOperation(value = "测试分布式session")
     String session(HttpServletRequest request, @RequestParam(value = "username",required = false) String username);
+
+    @GetMapping("/userInfo")
+    @ApiOperation("根据手机与密码获取用户信息")
+    BaseResponse<UserEntity> getUserInfo(@RequestParam("mobile") String mobile,@RequestParam("password") String password);
 }

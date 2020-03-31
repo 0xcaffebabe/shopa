@@ -14,6 +14,7 @@
         <module>shopa-service-entity</module>
         <module>shopa-service-impl</module>
         <module>shopa-common</module>
+        <module>shopa-web</module>
     </modules>
 
     <parent>

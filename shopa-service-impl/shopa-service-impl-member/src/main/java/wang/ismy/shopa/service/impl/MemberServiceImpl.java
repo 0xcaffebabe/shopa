@@ -170,5 +170,12 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
             return port + ":" + "write success";
         }
     }
+
+    @Override
+    public BaseResponse<UserEntity> getUserInfo(String mobile, String password) {
+        password = MD5Util.MD5(password);
+        UserEntity userEntity = userMapper.login(mobile,password);
+        return setResultSuccess(userEntity);
+    }
 }
 
