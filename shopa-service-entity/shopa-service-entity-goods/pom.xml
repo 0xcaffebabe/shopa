@@ -3,19 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shopa</artifactId>
+        <artifactId>shopa-service-entity</artifactId>
         <groupId>wang.ismy</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shopa-service-impl</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>shopa-service-impl-weixin</module>
-        <module>shopa-service-impl-member</module>
-        <module>shopa-service-impl-goods</module>
-    </modules>
+    <artifactId>shopa-service-entity-goods</artifactId>
 
 
 </project>

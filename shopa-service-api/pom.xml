@@ -14,6 +14,7 @@
     <modules>
         <module>shopa-service-api-weixin</module>
         <module>shopa-service-api-member</module>
+        <module>shopa-service-api-goods</module>
     </modules>
 
 

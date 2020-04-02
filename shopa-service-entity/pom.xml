@@ -14,6 +14,7 @@
     <modules>
         <module>shopa-service-entity-weixin</module>
         <module>shopa-service-entity-member</module>
+        <module>shopa-service-entity-goods</module>
     </modules>
 
 

@@ -1,0 +1,16 @@
+###服务启动端口号
+server:
+  port: 8500
+###服务名称(服务注册到eureka名称)  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+spring:
+  application:
+    name:  app-goods
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch-cluster
+        ####地址
+      cluster-nodes: 192.168.182.128:9300
