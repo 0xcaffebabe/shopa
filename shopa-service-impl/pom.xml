@@ -15,6 +15,7 @@
         <module>shopa-service-impl-weixin</module>
         <module>shopa-service-impl-member</module>
         <module>shopa-service-impl-goods</module>
+        <module>shopa-service-impl-pay</module>
     </modules>
 
 
